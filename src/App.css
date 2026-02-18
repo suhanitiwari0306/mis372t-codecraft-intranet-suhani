@@ -1,0 +1,251 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+  padding: 18px 0 32px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Make the user's name red + underlined (only once) */
+.userName {
+  color: red;
+  text-decoration: underline;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e7eaee;
+  border-radius: 10px;
+  padding: 18px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+.stack {
+  display: grid;
+  gap: 18px;
+}
+
+.header {
+  background: #0b2e4f;
+  color: #ffffff;
+  padding: 28px 16px 18px 16px;
+}
+
+.headerInner {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.headerTitle {
+  margin: 0 0 12px 0;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.05;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding-top: 6px;
+}
+
+.navLink {
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 6px;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+.navLinkActive {
+  text-decoration: underline;
+}
+
+.sectionTitle {
+  margin: 0 0 10px 0;
+  font-size: 26px;
+  font-weight: 900;
+  color: #13324f;
+}
+
+.sectionSubtitle {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: #cc6a22;
+}
+
+.list {
+  margin: 0 0 6px 22px;
+}
+
+.bodyText {
+  margin: 0;
+  line-height: 1.5;
+  color: #2a2f35;
+}
+
+/* ---------- NEW: Hello button styles ---------- */
+.helloBtn {
+  margin-top: 12px;
+  border: 1px solid #cfd6de;
+  background: #ffffff;
+  color: #13324f;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.helloBtn:hover {
+  background: #f7f9fb;
+}
+
+.helloText {
+  margin-top: 10px;
+  font-weight: 800;
+  color: #13324f;
+}
+
+/* ---------- NEW: Latest event subtitle ---------- */
+.eventSubtitle {
+  margin: 14px 0 0 0;
+  text-align: center;
+  font-weight: 700;
+  color: #2a2f35;
+}
+
+/* ---------- IMAGES: side-by-side like mockup ---------- */
+.imageRow {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+  justify-content: center;
+}
+
+.imageRow img {
+  width: 48%;
+  max-width: 420px;
+  border-radius: 12px;
+  display: block;
+}
+
+/* If screen is small, stack images nicely */
+@media (max-width: 700px) {
+  .imageRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageRow img {
+    width: 100%;
+  }
+}
+
+/* ---------- TABLE + FORM (unchanged) ---------- */
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 860px;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid #e7eaee;
+  padding: 10px 10px;
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.table th {
+  color: #13324f;
+  font-weight: 900;
+  background: #f7f9fb;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-weight: 800;
+  color: #13324f;
+  font-size: 14px;
+}
+
+.input {
+  border: 1px solid #dbe1e7;
+  border-radius: 8px;
+  padding: 10px 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: #0b2e4f;
+}
+
+.buttonRow {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  background: #0b2e4f;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.92;
+}
+
+.footer {
+  background: #0b2e4f;
+  color: white;
+  padding: 14px 16px;
+}
+
+.footerInner {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 700;
+}

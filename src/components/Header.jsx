@@ -1,25 +1,28 @@
 export default function Header({ userName, page, onNavigate }) {
+  const activeClass = (target) =>
+    target === page ? "navLink navLinkActive" : "navLink";
+
   return (
     <header className="header">
-      <h1 className="title">
-        Welcome <span className="userName">{userName}</span> to the CodeCraft Labs Intranet
-      </h1>
+      <div className="headerInner">
+        <h1 className="headerTitle">
+          Welcome <span className="userName">{userName}</span> to the CodeCraft Labs Intranet
+        </h1>
 
-      <nav className="nav">
-        <button
-          className={page === "home" ? "navLink active" : "navLink"}
-          onClick={() => onNavigate("home")}
-        >
-          Home
-        </button>
+        <nav className="nav">
+          <button className={activeClass("home")} onClick={() => onNavigate("home")}>
+            Home
+          </button>
 
-        <button
-          className={page === "employee" ? "navLink active" : "navLink"}
-          onClick={() => onNavigate("employee")}
-        >
-          Employee Management
-        </button>
-      </nav>
+          <button className={activeClass("employees")} onClick={() => onNavigate("employees")}>
+            Employee Management
+          </button>
+
+          <button className={activeClass("details")} onClick={() => onNavigate("details")}>
+            Employee Details
+          </button>
+        </nav>
+      </div>
     </header>
   );
 }

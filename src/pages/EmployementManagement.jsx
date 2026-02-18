@@ -1,8 +1,6 @@
 import { useState } from "react";
 import SectionCard from "../components/Sectioncard";
-
-
-export default function EmployeeManagement() {
+export default function EmployeeManagement({ engagementCount, onIncrease, onViewDetails }) {
   const [employees, setEmployees] = useState([
     {
       first: "John",
@@ -192,6 +190,23 @@ export default function EmployeeManagement() {
             </button>
           </div>
         </form>
+      </SectionCard>
+
+      {/* NEW: Thursday-style state demo (shared counter + link to details page) */}
+      <SectionCard title="Engagement Tracker">
+        <p className="bodyText">
+          Engagement Count: <strong>{engagementCount}</strong>
+        </p>
+
+        <div className="buttonRow">
+          <button className="button" type="button" onClick={onIncrease}>
+            Increase +
+          </button>
+
+          <button className="button" type="button" onClick={onViewDetails}>
+            View Details
+          </button>
+        </div>
       </SectionCard>
     </div>
   );
